@@ -65,29 +65,3 @@ Full write-up, including traffic-source, category, and new-vs-returning segmenta
 Every number is a live formula against `Raw_Data`, so replacing that tab with a real analytics export (same column headers) recalculates the entire workbook automatically.
 
 ---
-
-## How to Reproduce / Extend
-
-**Regenerate the dataset:**
-```bash
-python3 generate_data.py
-```
-
-**Run the SQL analysis** (any SQL engine — MySQL, PostgreSQL, SQLite):
-```sql
--- create the table and load ecommerce_funnel_data.csv, then run funnel_analysis.sql
-```
-Note: query #9 (monthly trend) uses `DATE_FORMAT`, which is MySQL/SQL Server syntax — swap in `strftime('%Y-%m', Session_Date)` for SQLite or `TO_CHAR(Session_Date, 'YYYY-MM')` for PostgreSQL.
-
-**Build a Tableau dashboard:**
-Connect Tableau to `ecommerce_funnel_data.csv` (or the `Raw_Data` tab of the Excel file). The data is already shaped for a funnel chart — one 0/1 flag column per stage, plus `Device`, `Traffic_Source`, `Product_Category`, and `User_Type` as dimensions for filters/segmentation.
-
----
-
-## Methodology Notes
-
-- This is a **simulated dataset** built for a portfolio/resume project, not real company data — see `Notes_ReadMe` in the workbook for full assumptions.
-- The mobile drop-off effect was intentionally modeled on a friction pattern commonly observed in real mobile commerce funnels, so the analysis workflow and PM framing transfer directly to a real dataset with the same column structure — no changes needed to the SQL or Excel formulas.
-
----
-
