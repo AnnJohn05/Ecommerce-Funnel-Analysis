@@ -91,9 +91,3 @@ Connect Tableau to `ecommerce_funnel_data.csv` (or the `Raw_Data` tab of the Exc
 
 ---
 
-## Resume Bullets
-
-**E-commerce Customer Funnel Analysis & Drop-off Optimization | SQL, Excel, Tableau**
-- Analyzed 50K+ session-level customer journeys across homepage, search, product-view, cart and checkout stages using SQL and Excel to identify a 56% drop-off at the Product View → Add to Cart stage, the single largest leak in the funnel.
-- Segmented funnel performance by device, traffic source, product category and user type; identified that mobile sessions (56% of traffic) converted at less than half the desktop rate at the cart stage despite comparable order values, isolating a UX/friction issue rather than a demand issue.
-- Translated findings into a product recommendation using a Problem → Hypothesis → Recommendation → KPI framework, proposing a mobile product-page redesign and defining stage-wise conversion rate as the primary success metric for a prioritized A/B test.
