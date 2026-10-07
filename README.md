@@ -62,6 +62,3 @@ Full write-up, including traffic-source, category, and new-vs-returning segmenta
 - **Raw_Data** — the full 50,000-row dataset the formulas reference
 - **Notes_ReadMe** — assumptions and data dictionary
 
-Every number is a live formula against `Raw_Data`, so replacing that tab with a real analytics export (same column headers) recalculates the entire workbook automatically.
-
----
